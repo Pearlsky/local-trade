@@ -1,0 +1,29 @@
+@use '../base/typography' as t;
+@use '../abstracts/variables' as v;
+
+.brand-usp {
+    text-align: center;
+
+    &-outline {
+        padding-block: 4em 6em;
+        margin-inline: v.$root-size;
+    }
+
+    &__byline {
+        font-size: v.$root-size;
+        color: v.$letter-blue;
+    }
+
+    &__headline {
+        width: 100%;
+        margin-block: .5em .7em;
+        font-size: t.$head;
+        font-weight: t.$bold;
+    }
+
+    &__subheadline {
+        color: v.$letter-gray;
+        line-height: 1.5;
+        margin-bottom: 4em;
+    }
+}

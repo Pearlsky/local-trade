@@ -1,0 +1,17 @@
+@use '../abstracts/variables' as v;
+@use '../base/typography' as t;
+
+.button {
+    font-family: t.$sora;
+    text-transform: uppercase;
+    background-color: transparent;
+    padding-inline: 1.5em;
+    padding-block: 1em;
+    border: none;
+    font-weight: t.$bold;
+}
+
+.button--primary {
+    @extend .button;
+    background-color: v.$primary-green;
+}

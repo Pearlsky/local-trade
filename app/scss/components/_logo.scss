@@ -1,0 +1,20 @@
+@use '../base/typography' as t;
+@use '../abstracts/variables' as v;
+
+.page-logo {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    &__text {
+        color: v.$letter-blue;
+        margin-block: 0;
+        margin-left: 0.3em;
+        font-size: t.$logohead ;
+        font-family: t.$jost;
+    }
+}

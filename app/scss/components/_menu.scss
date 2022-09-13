@@ -1,0 +1,13 @@
+@use '../abstracts/mixins' as m;
+
+.nav {
+
+    &__menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: transparent;
+        border: none;
+        @include m.create-btn-icon(url(../../../assets/menu.svg), 42px, 40px);
+    }
+}
