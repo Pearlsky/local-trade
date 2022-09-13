@@ -4,73 +4,116 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="dist/css/main.css">
     <title>The best cryptocurrency exchange | Local Trade</title>
 </head>
 <body>
     <header role="banner">
-        <article>
-            <div>
-                <img src="" alt="">
+        <article class="header-bar">
+            <div class="page-logo">
+                <img src="#" alt="Localtrade Logo">
                 <p>localtrade</p>
             </div>
         
             <div>
-                <nav>
-                    <ul>
-                        <li><a href="#">Learn Crypto</a>
-                            <ul role="menu">
-                                <li role="menuitem"><a href="#">Crypto Basics</a></li>
-                                <li role="menuitem"><a href="#">How to Earn Crypto</a></li>
-                                <li role="menuitem"><a href="#">How to Trade Crypto</a></li>
-                                <li role="menuitem"><a href="#">How to Use Crypto</a></li>
+                <nav class="nav">
+                    <button class="nav__button" aria-expanded="false">menu</button>
+                    <ul class="nav__list">
+                        <li class="nav__item" role="presentation"><a href="#" class="nav__link">Learn Crypto</a>
+                            <ul class="submenu">
+                                <li role="presentation"><a href="#" class="submenu__link">Crypto Basics</a></li>
+                                <li role="presentation"><a href="#" class="submenu__link">How to Earn Crypto</a></li>
+                                <li role="presentation"><a href="#" class="submenu__link">How to Trade Crypto</a></li>
+                                <li role="presentation"><a href="#" class="submenu__link">How to Use Crypto</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Finance</a>
-                            <ul role="menu">
-                                <li role="menuitem"><a href="#">New Cryptocurrencies</a></li>
-                                <li role="menuitem"><a href="#">Categories</a></li>
-                                <li role="menuitem"><a href="#">Watchlist</a></li>
-                                <li role="menuitem"><a href="#">Gainers & Losers</a></li>
-                                <li role="menuitem"><a href="#">High Volume</a></li>
+                        <li class="nav__item" role="presentation"><a href="#" class="nav__link">Finance</a>
+                            <ul class="submenu">
+                                <li role="presentation"><a href="#" class="submenu__link">New Cryptocurrencies</a></li>
+                                <li role="presentation"><a href="#" class="submenu__link">Categories</a></li>
+                                <li role="presentation"><a href="#" class="submenu__link">Watchlist</a></li>
+                                <li role="presentation"><a href="#" class="submenu__link">Gainers & Losers</a></li>
+                                <li role="presentation"><a href="#" class="submenu__link">High Volume</a></li>
                             </ul> 
                         </li>
-                        <li><a href="#">Listing</a></li>
-                        <li><a href="#">Academy</a></li>
-                        <li><a href="#">About Us</a></li>
+                        <li class="nav__item" role="presentation"><a href="#" class="nav__link">Listing</a></li>
+                        <li class="nav__item" role="presentation"><a href="#" class="nav__link">Academy</a></li>
+                        <li class="nav__item" role="presentation"><a href="#" class="nav__link">About Us</a></li>
                     </ul>
                 </nav>
                 <div>
-                    <span>EUR</span>
-                    <span>USD</span>
-                    <button>sign up</button>
-                    <button>login</button>
+                    <div class="page-currency">
+                        <span class="page-currency__item">EUR</span>
+                        <span class="page-currency__item">USD</span>
+                    </div>
+                    <button class="signup-btn">sign up</button>
+                    <button class="login-btn">login</button>
                 </div>
             </div>
         </article>
 
-        <section>
-            <article>
+        <article class="brand">
+            <section class="brand-header">
                 <div>
                     <small>0% trading commission</small>
-                    <h1>Join the best cryptocurrency exchange</h1>
-                    <p>Trade and convert over 50 different cryptocurrency and fiat currency pairs, including Bitcoin, Ethereum and Binance coins</p>
-                    <button>convert cryptocurrency</button>
+                    <h1 class="brand__headline">Join the best cryptocurrency exchange</h1>
+                    <p class="brand__subheadline">Trade and convert over 50 different cryptocurrency and fiat currency pairs, including Bitcoin, Ethereum and Binance coins</p>
+                    <button class="header-cta">convert cryptocurrency</button>
                 </div>
-            </article>
-
-            <article></article>
-        </section>
+            </section>
+            <section class="brand-hero"></section>
+        </article>
     </header>
 
-    <main role="main"></main>
+    <main role="main">
+        <section style="display: none;">
+            <article>
+                <header>
+                    <div>
+                        <img src="#" alt="Localtrade Logo">
+                        <h2>Cryptocurrency Converter</h2>
+                    </div>
+                </header>
+                <main>
+                    <section>
+                        <div>
+                            <label for="">Amount</label>
+                            <div>
+                                <input type="text">
+                                <select name="" id=""></select>
+                            </div>
+                        </div>
+    
+                        <div>
+                            <label for="">Converted to</label>
+                            <div>
+                                <input type="text">
+                                <select name="" id=""></select>
+                            </div>
+                        </div>
+                    </section>
+                    <p>
+                        <span>0</span>
+                        <span>BTC</span>
+                        =
+                        <span>0</span>
+                        <span>USD</span>
+                    </p>
+                    <button>Convert</button>
+                </main>
+            </article>
+        </section>
+    </main>
     <footer role="contentinfo">
-        <article></article>
-        <article>
+        <div class="page-logo">
+            <img src="#" alt="Localtrade Logo">
+            <p>localtrade</p>
+        </div>
+
+        <article class="footer-nav">
             <div>
-                <p>Products</p>
-                <ul>
+                <h4 class="footer-nav__head">Products</h4>
+                <ul class="footer-nav__list">
                     <li>Cyrptocurrency Converter</li>
                     <li>Rates API</li>
                     <li>Job Board</li>
@@ -78,8 +121,8 @@
                 </ul>
             </div>
             <div>
-                <p>Company</p>
-                <ul>
+                <h4 class="footer-nav__head">Company</h4>
+                <ul class="footer-nav__list">
                     <li>About Us</li>
                     <li>Terms of Use</li>
                     <li>Privacy Policy</li>
@@ -87,8 +130,8 @@
                 </ul>
             </div>
             <div>
-                <p>Support</p>
-                <ul>
+                <h4 class="footer-nav__head">Support</h4>
+                <ul class="footer-nav__list">
                     <li>Request Form</li>
                     <li>Contact Support</li>
                     <li>FAQ</li>
@@ -96,8 +139,8 @@
                 </ul>
             </div>
             <div>
-                <p>Socials</p>
-                <ul>
+                <h4 class="footer-nav__head">Socials</h4>
+                <ul class="footer-nav__list">
                     <li>Facebook</li>
                     <li>Twitter</li>
                     <li>Instagram</li>
@@ -105,7 +148,6 @@
                 </ul>
             </div>
         </article>
-
     </footer>
 </body>
 </html>
