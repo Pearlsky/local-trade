@@ -1,0 +1,25 @@
+@use '../abstracts/variables' as v;
+
+
+.header-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1240px;
+
+    &-layout {
+        padding-block: v.$root-size;
+        padding-inline: 1em;
+        max-width: 100%;
+        border-bottom: 1px solid v.$line-gray;
+    }
+}
+
+.header-brand {
+    
+    &-layout {
+        margin-inline: v.$root-size;
+        border-inline: 1px solid v.$line-gray;
+    }
+}
