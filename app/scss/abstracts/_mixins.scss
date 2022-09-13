@@ -1,0 +1,12 @@
+@use './variables' as v;
+
+@mixin create-btn-icon ($bgImg,$parentWidth, $parentHeight) {
+    background: no-repeat $bgImg, ;
+    display: inline-block;
+    height: $parentHeight;
+    width: $parentWidth;
+    text-indent: 5em;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+}
