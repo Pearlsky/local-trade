@@ -1,0 +1,33 @@
+@use './typography' as t;
+
+:root {
+    box-sizing: border-box;
+    font-size: 0.9em;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    max-width: 100%;
+    margin-inline: auto;
+    height: 100vh;
+    font-family: t.$sora;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+[class$="-layout"] {
+    max-width: 1240px;
+}
