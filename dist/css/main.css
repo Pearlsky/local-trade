@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto:wght@300;400;700&family=Sora:wght@300;400;500;600&display=swap");
+:root {
+  box-sizing: border-box;
+  font-size: 0.9em;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  max-width: 100%;
+  margin-inline: auto;
+  height: 100vh;
+  font-family: "Sora", sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+[class$=-layout] {
+  max-width: 1240px;
+}
+
+.nav__menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  background: no-repeat url(../../../assets/menu.svg);
+  display: inline-block;
+  height: 40px;
+  width: 42px;
+  text-indent: 5em;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.page-logo {
+  display: flex;
+  align-items: center;
+}
+.page-logo__icon {
+  width: 30px;
+  height: 30px;
+}
+.page-logo__text {
+  color: rgb(45, 47, 52);
+  margin-block: 0;
+  margin-left: 0.3em;
+  font-size: 1.8rem;
+  font-family: "Jost", sans-serif;
+}
+
+.brand-usp {
+  text-align: center;
+}
+.brand-usp-outline {
+  padding-block: 4em 6em;
+  margin-inline: 1em;
+}
+.brand-usp__byline {
+  font-size: 1em;
+  color: rgb(45, 47, 52);
+}
+.brand-usp__headline {
+  width: 100%;
+  margin-block: 0.5em 0.7em;
+  font-size: 3.5rem;
+  font-weight: 500;
+}
+.brand-usp__subheadline {
+  color: rgb(99, 99, 99);
+  line-height: 1.5;
+  margin-bottom: 4em;
+}
+
+.button, .button--primary {
+  font-family: "Sora", sans-serif;
+  text-transform: uppercase;
+  background-color: transparent;
+  padding-inline: 1.5em;
+  padding-block: 1em;
+  border: none;
+  font-weight: 500;
+}
+
+.button--primary {
+  background-color: rgb(99, 255, 161);
+}
+
+.header-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1240px;
+}
+.header-bar-layout {
+  padding-block: 1em;
+  padding-inline: 1em;
+  max-width: 100%;
+  border-bottom: 1px solid rgb(207, 207, 207);
+}
+
+.header-brand-layout {
+  margin-inline: 1em;
+  border-inline: 1px solid rgb(207, 207, 207);
+}
+
+main {
+  border-block: 1px solid rgb(207, 207, 207);
+  height: 100px;
+}
+
+.main-layout {
+  margin-inline: 1em;
+  height: 100%;
+  border-inline: 1px solid rgb(207, 207, 207);
+}
+
+.footer-layout {
+  margin-inline: 1em;
+  padding-block: 4em 2em;
+}
+
+.footer-nav {
+  color: rgb(99, 99, 99);
+  line-height: 1.5;
+  margin-top: 2.5em;
+}
+.footer-nav__head {
+  margin-bottom: 0;
+}
+.footer-nav__list {
+  margin-top: 0.2em;
+}
