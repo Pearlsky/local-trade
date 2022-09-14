@@ -63,7 +63,7 @@
                             <h1 class="brand-usp__headline">Join the best crypto currency exchange</h1>
                         </div>
                         <p class="brand-usp__subheadline">Trade and convert over 50 different cryptocurrency and fiat currency pairs, including Bitcoin, Ethereum and Binance coins</p>
-                        <button class="button--primary">convert cryptocurrency</button>
+                        <button class="brand-usp__cta">convert cryptocurrency</button>
                     </div>
                 </section>
                 <section class="brand-hero"></section>
@@ -73,6 +73,74 @@
 
     <main role="main">
         <div class="main-layout">
+            <table class="crypto-table">
+                <thead class="crypto-table-head">
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Change</th>
+                        <th>Dynamic</th>
+                    </tr>
+                </thead>
+                <tbody class="crypto-table-body">
+                    <tr>
+                        <td>
+                            <img src="#" alt="">
+                            <p class="crypto">BNB <span class="crypto__name">(Binance Coin)</span></p>
+                        </td>
+                        <td>239.01</td>
+                        <td>
+                            <div class="crypto__change--bull">
+                                <span class="crypto__change__percent">+3.2%</span>
+                                <span class="crypto__change__arrow--bull"></span>
+                            </div>
+                        </td>
+                        <td><div class="crypto__dynamic--bull"></div></span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="#" alt="">
+                            <p class="crypto">BNB <span class="crypto__name">(Binance Coin)</span></p>
+                        </td>
+                        <td>239.01</td>
+                        <td>
+                            <div class="crypto__change--bull">
+                                <span class="crypto__change__percent">+3.2%</span>
+                                <span class="crypto__change__arrow--bull"></span>
+                            </div>
+                        </td>
+                        <td><div class="crypto__dynamic--bull"></div></span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="#" alt="">
+                            <p class="crypto">BNB <span class="crypto__name">(Binance Coin)</span></p>
+                        </td>
+                        <td>239.01</td>
+                        <td>
+                            <div class="crypto__change--bull">
+                                <span class="crypto__change__percent">+3.2%</span>
+                                <span class="crypto__change__arrow--bull"></span>
+                            </div>
+                        </td>
+                        <td><div class="crypto__dynamic--bull"></div></span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="#" alt="">
+                            <p class="crypto">BNB <span class="crypto__name">(Binance Coin)</span></p>
+                        </td>
+                        <td>239.01</td>
+                        <td>
+                            <div class="crypto__change--bull">
+                                <span class="crypto__change__percent">+3.2%</span>
+                                <span class="crypto__change__arrow--bull"></span>
+                            </div>
+                        </td>
+                        <td><div class="crypto__dynamic--bull"></div></span></td>
+                    </tr>
+                </tbody>
+            </table>
             <section style="display: none;">
                 <article>
                     <header>
@@ -114,49 +182,53 @@
     </main>
     <footer role="contentinfo">
         <div class="footer-layout">
-            <div class="page-logo">
-                <img class="page-logo__icon" src="./assets/local-trade-logo.svg" alt="Localtrade Logo">
-                <p class="page-logo__text">localtrade</p>
-            </div>
-    
-            <article class="footer-nav">
-                <div>
-                    <h4 class="footer-nav__head">Products</h4>
-                    <ul class="footer-nav__list">
-                        <li>Cyrptocurrency Converter</li>
-                        <li>Rates API</li>
-                        <li>Job Board</li>
-                        <li>Sitemap</li>
-                    </ul>
+                <div class="page-logo">
+                    <img class="page-logo__icon" src="./assets/local-trade-logo.svg" alt="Localtrade Logo">
+                    <p class="page-logo__text">localtrade</p>
                 </div>
-                <div>
-                    <h4 class="footer-nav__head">Company</h4>
-                    <ul class="footer-nav__list">
-                        <li>About Us</li>
-                        <li>Terms of Use</li>
-                        <li>Privacy Policy</li>
-                        <li>Careers</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="footer-nav__head">Support</h4>
-                    <ul class="footer-nav__list">
-                        <li>Request Form</li>
-                        <li>Contact Support</li>
-                        <li>FAQ</li>
-                        <li>Glossary</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="footer-nav__head">Socials</h4>
-                    <ul class="footer-nav__list">
-                        <li>Facebook</li>
-                        <li>Twitter</li>
-                        <li>Instagram</li>
-                        <li>Telegram</li>
-                    </ul>
-                </div>
-            </article>
+
+                <article class="footer-nav">
+                    <div class="footer-row">
+                        <div>
+                            <h4 class="footer-nav__head">Products</h4>
+                            <ul class="footer-nav__list">
+                                <li><a class="footer-nav__link" href="#">Cyrpto Converter</a></li>
+                                <li><a class="footer-nav__link" href="#">Rates API</a></li>
+                                <li><a class="footer-nav__link" href="#">Job Board</a></li>
+                                <li><a class="footer-nav__link" href="#">Sitemap</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="footer-nav__head">Company</h4>
+                            <ul class="footer-nav__list">
+                                <li><a class="footer-nav__link" href="#">About Us</a></li>
+                                <li><a class="footer-nav__link" href="#">Terms of Use</a></li>
+                                <li><a class="footer-nav__link" href="#">Privacy Policy</a></li>
+                                <li><a class="footer-nav__link" href="#">Careers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-row">
+                        <div>
+                            <h4 class="footer-nav__head">Support</h4>
+                            <ul class="footer-nav__list">
+                                <li><a class="footer-nav__link" href="#">Request Form</a></li>
+                                <li><a class="footer-nav__link" href="#">Contact Support</a></li>
+                                <li><a class="footer-nav__link" href="#">FAQ</a></li>
+                                <li><a class="footer-nav__link" href="#">Glossary</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="footer-nav__head">Socials</h4>
+                            <ul class="footer-nav__list">
+                                <li><a class="footer-nav__link" href="#">Facebook</a></li>
+                                <li><a class="footer-nav__link" href="#">Twitter</a></li>
+                                <li><a class="footer-nav__link" href="#">Instagram</a></li>
+                                <li><a class="footer-nav__link" href="#">Telegram</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
         </div>
     </footer>
 </body>
