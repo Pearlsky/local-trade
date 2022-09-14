@@ -6,12 +6,18 @@
     text-transform: uppercase;
     background-color: transparent;
     padding-inline: 1.5em;
-    padding-block: 1em;
+    padding-block: 1.5em;
     border: none;
+    border-radius: 5px;
     font-weight: t.$bold;
+    cursor: pointer;
 }
 
 .button--primary {
-    @extend .button;
     background-color: v.$primary-green;
+}
+
+.brand-usp__cta {
+    @extend .button;
+    @extend .button--primary;
 }
