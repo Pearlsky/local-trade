@@ -3,11 +3,11 @@
 
 main {
     border-block: 1px solid v.$line-gray;
-    height: 100px;
 }
 
 .main-layout {
     margin-inline: v.$root-size;
     height: 100%;
     border-inline: 1px solid v.$line-gray;
+    padding: 2.5em 1.5em;
 }

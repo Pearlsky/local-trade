@@ -2,7 +2,8 @@
 
 .footer-layout {
     margin-inline: v.$root-size;
-    padding-block: 4em 2em;
+    padding-block: 3em 2em;
+    padding-inline: 1.5em;
 }
 
 .footer-nav {
@@ -14,7 +15,18 @@
         margin-bottom: 0;
     }
 
-    &__list {
-        margin-top: .2em;
+    &__link {
+        color: v.$letter-gray;
     }
 }
+
+.footer-row {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+
+    & > div {
+        flex-basis: 50%;
+    }
+}
+
