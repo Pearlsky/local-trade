@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto:wght@300;400;700&family=Sora:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Sora:wght@300;400;500;600;700&family=Urbanist:wght@500;700;800&display=swap");
 :root {
   box-sizing: border-box;
   font-size: 0.9em;
@@ -14,7 +14,6 @@ body {
   margin: 0;
   max-width: 100%;
   margin-inline: auto;
-  height: 100vh;
   font-family: "Sora", sans-serif;
 }
 
@@ -68,7 +67,7 @@ a {
 }
 .brand-usp-outline {
   padding-block: 4em 6em;
-  margin-inline: 1em;
+  margin-inline: 1.5em;
 }
 .brand-usp__byline {
   font-size: 1em;
@@ -86,18 +85,103 @@ a {
   margin-bottom: 4em;
 }
 
-.button, .button--primary {
+.button, .brand-usp__cta {
   font-family: "Sora", sans-serif;
   text-transform: uppercase;
   background-color: transparent;
   padding-inline: 1.5em;
-  padding-block: 1em;
+  padding-block: 1.5em;
   border: none;
+  border-radius: 5px;
   font-weight: 500;
+  cursor: pointer;
 }
 
-.button--primary {
+.button--primary, .brand-usp__cta {
   background-color: rgb(99, 255, 161);
+}
+
+.crypto-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.crypto-table-head {
+  text-align: left;
+}
+.crypto-table-head th {
+  padding-block: 1em;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: rgb(99, 99, 99);
+}
+.crypto-table-head th:nth-child(1) {
+  width: 35%;
+}
+.crypto-table-head th:nth-child(2) {
+  width: 25%;
+}
+.crypto-table-head th:nth-child(3) {
+  width: 20%;
+}
+.crypto-table-head th:nth-child(4) {
+  width: 20%;
+}
+
+.crypto-table-body td {
+  color: rgb(45, 47, 52);
+  font-size: 1.2rem;
+}
+.crypto-table-body td:nth-child(1) {
+  display: flex;
+  align-items: center;
+}
+.crypto-table-body td:nth-child(2) {
+  font-weight: 800;
+}
+
+.crypto__name {
+  color: rgb(99, 99, 99);
+}
+.crypto__change, .crypto__change--bull, .crypto__change--bear {
+  padding: 0.5em 0;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 80%;
+  max-width: 120px;
+}
+.crypto__change__arrow, .crypto__change__arrow--bear, .crypto__change__arrow--bull {
+  background: no-repeat;
+  background-position: 50%;
+  background-size: 2.5rem;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.crypto__change__arrow--bull {
+  background-image: url(../../../assets/arrow-high.svg);
+}
+.crypto__change__arrow--bear {
+  background-image: url(../../../assets/arrow-low.svg);
+}
+.crypto__change--bear {
+  background-color: rgb(241, 255, 247);
+}
+.crypto__change--bull {
+  background-color: rgb(241, 255, 247);
+}
+.crypto__dynamic, .crypto__dynamic--bull, .crypto__dynamic--bear {
+  background: no-repeat;
+  background-size: contain;
+  padding: 0.5em 0;
+  height: 1.5em;
+}
+.crypto__dynamic--bear {
+  background-image: url(../../../assets/bear-change.svg);
+}
+.crypto__dynamic--bull {
+  background-image: url(../../../assets/bull-change.svg);
 }
 
 .header-bar {
@@ -121,18 +205,19 @@ a {
 
 main {
   border-block: 1px solid rgb(207, 207, 207);
-  height: 100px;
 }
 
 .main-layout {
   margin-inline: 1em;
   height: 100%;
   border-inline: 1px solid rgb(207, 207, 207);
+  padding: 2.5em 1.5em;
 }
 
 .footer-layout {
   margin-inline: 1em;
-  padding-block: 4em 2em;
+  padding-block: 3em 2em;
+  padding-inline: 1.5em;
 }
 
 .footer-nav {
@@ -143,6 +228,15 @@ main {
 .footer-nav__head {
   margin-bottom: 0;
 }
-.footer-nav__list {
-  margin-top: 0.2em;
+.footer-nav__link {
+  color: rgb(99, 99, 99);
+}
+
+.footer-row {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+.footer-row > div {
+  flex-basis: 50%;
 }
