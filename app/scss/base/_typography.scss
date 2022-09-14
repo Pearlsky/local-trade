@@ -1,12 +1,13 @@
 // Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto:wght@300;400;700&family=Sora:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Sora:wght@300;400;500;600;700&family=Urbanist:wght@500;700;800&display=swap');
 
 // Font-family
 $jost: 'Jost', sans-serif;
-$roboto: 'Roboto', sans-serif;
+$urbanist: 'Urbanist', sans-serif;
 $sora: 'Sora', sans-serif;
 
 // Font-weights:
+$huge: 800;
 $boldest: 700;
 $bolder: 600;
 $bold: 500;
@@ -19,5 +20,6 @@ $headline: 4rem;
 $head: 3.5rem;
 $subhead: 2.5rem;
 $logohead: 1.8rem;
-$bigtext: 1.3rem;
+$bigtext: 1.2rem;
 $smalltext: 1rem;
+$tinytext: 0.9rem;
