@@ -1,0 +1,117 @@
+@use '../abstracts/variables' as v;
+@use '../base/typography' as t;
+
+.crypto-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.crypto-table-head {
+    text-align: left;
+    
+    & th {
+        padding-block: 1em;
+        font-weight: t.$regular;
+        font-size: t.$tinytext;
+        color: v.$letter-gray;
+    }
+
+    & th:nth-child(1) {
+        width: 35%;
+    }
+
+    & th:nth-child(2) {
+        width: 25%;
+    }
+
+    & th:nth-child(3) {
+        width: 20%;
+    }
+
+    & th:nth-child(4) {
+        width: 20%;
+    }
+}
+
+.crypto-table-body {
+
+    & td {
+        color: v.$letter-blue;
+        font-size: t.$bigtext;
+
+        &:nth-child(1) {
+            display: flex;
+            align-items: center;
+        }
+
+        &:nth-child(2) {
+            font-weight: t.$huge;
+        }
+    }
+}
+
+.crypto {
+    &__name {
+        color: v.$letter-gray;
+    }
+
+    &__change {
+        padding: .5em 0;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 80%;
+        max-width: 120px;
+
+        &__arrow {
+            background: no-repeat;
+            background-position: 50%;
+            background-size: t.$subhead;    
+            width: t.$bigtext;
+            height: t.$bigtext;
+        }
+
+        &__arrow--bull {
+            @extend .crypto__change__arrow;
+            background-image: url(../../../assets/arrow-high.svg);
+        }
+
+        &__arrow--bear {
+            @extend .crypto__change__arrow;
+            background-image: url(../../../assets/arrow-low.svg);
+        }
+
+        &--bear {
+            @extend .crypto__change;
+            background-color: v.$fade-green; 
+ 
+        }
+
+        &--bull {
+            @extend .crypto__change;
+            background-color: v.$fade-green; 
+        }
+    }
+
+    &__dynamic {
+        background: no-repeat;
+        background-size: contain;
+        padding: .5em 0;
+        height: 1.5em;
+
+        &--bear {
+            @extend .crypto__dynamic;
+            background-image: url(../../../assets/bear-change.svg);
+        }
+
+        &--bull {
+            @extend .crypto__dynamic;
+            background-image: url(../../../assets/bull-change.svg);
+        }
+
+    }
+    
+}
+
+
