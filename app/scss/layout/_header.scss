@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
 
 
 .header-bar {
@@ -7,6 +8,7 @@
     align-items: center;
     justify-content: space-between;
     max-width: 1240px;
+    margin-inline: auto;
 
     &-layout {
         padding-block: v.$root-size;
@@ -18,8 +20,16 @@
 
 .header-brand {
     
-    &-layout {
+    &-outline {
         margin-inline: v.$root-size;
+    }
+
+    &-layout {
+        margin-inline: auto;
         border-inline: 1px solid v.$line-gray;
     }
+
+    @include m.respond-to('tablet') {
+        display: flex;
+    };
 }

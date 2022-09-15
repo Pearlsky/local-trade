@@ -1,9 +1,17 @@
 @use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
 
 .footer-layout {
-    margin-inline: v.$root-size;
-    padding-block: 3em 2em;
+    margin-inline: auto;
+    padding-block: 4em 6em;
     padding-inline: 1.5em;
+
+    @include m.respond-to('laptop') {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+    }
 }
 
 .footer-nav {
@@ -18,15 +26,25 @@
     &__link {
         color: v.$letter-gray;
     }
+
+    @include m.respond-to('tablet') {
+        display: flex;
+        gap: 2em;
+    }
+
+    @include m.respond-to('laptop') {
+        flex-basis: 60%;
+        margin-top: 0;
+    }
 }
 
 .footer-row {
     display: flex;
     align-items: center;
     gap: 2em;
+    flex-basis: 50%;
 
     & > div {
         flex-basis: 50%;
     }
 }
-
