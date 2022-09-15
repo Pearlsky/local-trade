@@ -1,5 +1,6 @@
 @use './variables' as v;
 
+
 @mixin create-btn-icon ($bgImg,$parentWidth, $parentHeight) {
     background: no-repeat $bgImg, ;
     display: inline-block;
@@ -9,4 +10,32 @@
     white-space: nowrap;
     overflow: hidden;
     cursor: pointer;
+}
+
+// Breakpoints 
+$breakpoints: (
+    // 1200px
+    'desktop': 83em,
+
+    // 950px
+    'laptop': 66em,
+
+    // 768px
+    'tablet': 53em, 
+
+    // 400px
+    'mobile': 28em
+);
+
+@mixin respond-to($breakpoint) {
+    // Retrieves the value from the key
+    $value: map-get($breakpoints, $breakpoint);
+
+    // if the key exists in the map
+    @if $value != null {
+        // prints a media query based on the value
+        @media (min-width: $value) {
+            @content;
+        }
+    }
 }
