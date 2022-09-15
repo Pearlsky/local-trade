@@ -1,12 +1,18 @@
 @use '../base/typography' as t;
 @use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
 
 .brand-usp {
     text-align: center;
 
     &-outline {
-        padding-block: 4em 6em;
+        padding-block: 5em;
         margin-inline: 1.5em;
+
+        @include m.respond-to('tablet') {
+            padding-block: 6em 8em;
+            margin-inline: 1.5em + 1;
+        }
     }
 
     &__byline {
@@ -19,11 +25,38 @@
         margin-block: .5em .7em;
         font-size: t.$head;
         font-weight: t.$bold;
+
+        @include m.respond-to('tablet') {
+            font-size: t.$head + 1;
+        }
     }
 
     &__subheadline {
         color: v.$letter-gray;
         line-height: 1.5;
         margin-bottom: 4em;
+    }
+
+    @include m.respond-to('tablet') {
+        flex-basis: 50%;
+        text-align: left;
+    }
+
+}
+
+.brand-hero {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-basis: 50%;
+
+    &__img {
+        padding-block: 1em 3em;
+        width: 100%;
+        height: 650px;
+
+        @include m.respond-to('tablet') {
+            padding-bottom: 1em;
+        }
     }
 }

@@ -1,5 +1,7 @@
 @use '../abstracts/variables' as v;
 @use '../base/typography' as t;
+@use '../abstracts/mixins' as m;
+
 
 .crypto-table {
     width: 100%;
@@ -14,22 +16,41 @@
         font-weight: t.$regular;
         font-size: t.$tinytext;
         color: v.$letter-gray;
-    }
 
-    & th:nth-child(1) {
-        width: 35%;
-    }
+        &:nth-child(1) {
+            width: 45%;
+        }
 
-    & th:nth-child(2) {
-        width: 25%;
-    }
+        &:nth-child(2) {
+            width: 30%;
+        }
 
-    & th:nth-child(3) {
-        width: 20%;
-    }
+        &:nth-child(3) {
+            width: 25%;
+        }
 
-    & th:nth-child(4) {
-        width: 20%;
+        &:nth-child(4) {
+            display: none;
+        }
+
+        @include m.respond-to('tablet') {
+            &:nth-child(1) {
+                width: 35%;
+            }
+    
+            &:nth-child(2) {
+                width: 25%;
+            }
+    
+            &:nth-child(3) {
+                width: 20%;
+            }
+    
+            &:nth-child(4) {
+                display: table-cell;
+                width: 20%;
+            }
+        }
     }
 }
 
@@ -47,10 +68,27 @@
         &:nth-child(2) {
             font-weight: t.$huge;
         }
+
+        &:nth-child(4) {
+            display: none;
+            @include m.respond-to('tablet') {
+                display: table-cell;
+            }
+        }
     }
 }
 
 .crypto {
+    &__icon {
+        background-color: #fff;
+        height: 30px;
+        width: 30px;
+    }
+
+    &__abbr {
+        margin-left: .5em;
+    }
+
     &__name {
         color: v.$letter-gray;
     }
@@ -62,7 +100,7 @@
         align-items: center;
         justify-content: space-evenly;
         width: 80%;
-        max-width: 120px;
+        max-width: 150px;
 
         &__arrow {
             background: no-repeat;
@@ -97,8 +135,9 @@
     &__dynamic {
         background: no-repeat;
         background-size: contain;
+        background-position: 0% 50%;
         padding: .5em 0;
-        height: 1.5em;
+        height: 2em;
 
         &--bear {
             @extend .crypto__dynamic;
@@ -109,9 +148,5 @@
             @extend .crypto__dynamic;
             background-image: url(../../../assets/bull-change.svg);
         }
-
     }
-    
 }
-
-
