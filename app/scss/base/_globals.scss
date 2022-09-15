@@ -1,4 +1,6 @@
+@use '../abstracts/variables' as v;
 @use './typography' as t;
+
 
 :root {
     box-sizing: border-box;
@@ -14,7 +16,6 @@
 body {
     margin: 0;
     max-width: 100%;
-    margin-inline: auto;
     font-family: t.$sora;
 }
 
@@ -29,4 +30,8 @@ a {
 
 [class$="-layout"] {
     max-width: 1240px;
+}
+
+[class$="-outliner"] {
+    margin-inline: v.$root-size;
 }
