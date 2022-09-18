@@ -54,9 +54,15 @@
         padding-block: 1em 3em;
         width: 100%;
         height: 650px;
+    }
 
-        @include m.respond-to('tablet') {
-            padding-bottom: 1em;
+    @include m.respond-to('tablet') {
+        border-left: 1px solid v.$line-gray;
+
+        &__img {
+            @include m.respond-to('tablet') {
+                padding-bottom: 1em;
+            }
         }
     }
 }

@@ -5,8 +5,6 @@
     font-family: t.$sora;
     text-transform: uppercase;
     background-color: transparent;
-    padding-inline: 1.5em;
-    padding-block: 1.5em;
     border: none;
     border-radius: 5px;
     font-weight: t.$bold;
@@ -20,4 +18,18 @@
 .brand-usp__cta {
     @extend .button;
     @extend .button--primary;
+    padding: 1.5em;
+}
+
+.signup-btn {
+    @extend .button;
+    padding: 1em;
+}
+
+.login-btn {
+    @extend .button;
+    @extend .button--primary;
+    padding-block: 1em;
+    padding-inline: 1.7rem;
+
 }
