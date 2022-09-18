@@ -17,36 +17,47 @@
                     <p class="page-logo__text">localtrade</p>
                 </div>
             
-                <div  class="header-bar-actions" >
-                    <nav class="nav">
-                        <button class="nav__menu" aria-expanded="false">menu</button>
-                        <ul class="nav__list" hidden>
-                            <li class="nav__item" role="presentation"><a href="#" class="nav__link">Learn Crypto</a>
-                                <ul class="submenu">
-                                    <li role="presentation"><a href="#" class="submenu__link">Crypto Basics</a></li>
-                                    <li role="presentation"><a href="#" class="submenu__link">How to Earn Crypto</a></li>
-                                    <li role="presentation"><a href="#" class="submenu__link">How to Trade Crypto</a></li>
-                                    <li role="presentation"><a href="#" class="submenu__link">How to Use Crypto</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav__item" role="presentation"><a href="#" class="nav__link">Finance</a>
-                                <ul class="submenu">
-                                    <li role="presentation"><a href="#" class="submenu__link">New Cryptocurrencies</a></li>
-                                    <li role="presentation"><a href="#" class="submenu__link">Categories</a></li>
-                                    <li role="presentation"><a href="#" class="submenu__link">Watchlist</a></li>
-                                    <li role="presentation"><a href="#" class="submenu__link">Gainers & Losers</a></li>
-                                    <li role="presentation"><a href="#" class="submenu__link">High Volume</a></li>
-                                </ul> 
-                            </li>
-                            <li class="nav__item" role="presentation"><a href="#" class="nav__link">Listing</a></li>
-                            <li class="nav__item" role="presentation"><a href="#" class="nav__link">Academy</a></li>
-                            <li class="nav__item" role="presentation"><a href="#" class="nav__link">About Us</a></li>
-                        </ul>
+                <div class="header-bar__controls">
+                    <nav class="nav" aria-label="Main Navigation">
+                        <button class="nav__menu--open" aria-expanded="false">menu</button>
+                        <section class="nav-outline">
+                            <header class="nav-header">
+                                <div class="page-logo">
+                                    <img class="page-logo__icon" src="./assets/local-trade-logo.svg" alt="Localtrade Logo">
+                                    <p class="page-logo__text">localtrade</p>
+                                </div>
+                                <button class="nav__menu--close"></button>
+                            </header>
+
+                            <ul class="nav__list">
+                                <li class="nav__item" role="presentation"><a href="#" class="nav__link">Learn Crypto</a>
+                                    <ul class="submenu" hidden>
+                                        <li role="presentation"><a href="#" class="submenu__link">Crypto Basics</a></li>
+                                        <li role="presentation"><a href="#" class="submenu__link">How to Earn Crypto</a></li>
+                                        <li role="presentation"><a href="#" class="submenu__link">How to Trade Crypto</a></li>
+                                        <li role="presentation"><a href="#" class="submenu__link">How to Use Crypto</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav__item" role="presentation"><a href="#" class="nav__link">Finance</a>
+                                    <ul class="submenu" hidden>
+                                        <li role="presentation"><a href="#" class="submenu__link">New Cryptocurrencies</a></li>
+                                        <li role="presentation"><a href="#" class="submenu__link">Categories</a></li>
+                                        <li role="presentation"><a href="#" class="submenu__link">Watchlist</a></li>
+                                        <li role="presentation"><a href="#" class="submenu__link">Gainers & Losers</a></li>
+                                        <li role="presentation"><a href="#" class="submenu__link">High Volume</a></li>
+                                    </ul> 
+                                </li>
+                                <li class="nav__item" role="presentation"><a href="#" class="nav__link">Listing</a></li>
+                                <li class="nav__item" role="presentation"><a href="#" class="nav__link">Academy</a></li>
+                                <li class="nav__item" role="presentation"><a href="#" class="nav__link">About Us</a></li>
+                            </ul>
+                        </section>  
                     </nav>
-                    <div hidden>
-                        <div class="page-currency">
-                            <span class="page-currency__item">EUR</span>
-                            <span class="page-currency__item">USD</span>
+                    <div class="header-bar__actions" hidden>
+                        <div class="currency-select">
+                            <span class="currency-select__item">EUR</span>
+                            <span class="currency-select__divider"></span>
+                            <span class="currency-select__item">USD</span>
                         </div>
                         <button class="signup-btn">sign up</button>
                         <button class="login-btn">login</button>
@@ -79,7 +90,7 @@
     <main role="main">
         <div class="main-outliner">
             <div class="main-layout">
-                <table class="crypto-table">
+                <table class="crypto-table" aria-label="Cryptocurrencies Table Data">
                     <!-- <thead class="crypto-table-head">
                         <tr>
                             <th>Name</th>
@@ -107,10 +118,10 @@
                 </table>
                 <section style="display: none;">
                     <article>
-                        <header>
+                        <header aria-labelledby="cryptoconverter modal">
                             <div>
                                 <img src="#" alt="Localtrade Logo">
-                                <h2>Cryptocurrency Converter</h2>
+                                <h2 id="Cryptoconverter Modal">Cryptocurrency Converter</h2>
                             </div>
                         </header>
                         <main>
