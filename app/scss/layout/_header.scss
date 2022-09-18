@@ -16,6 +16,42 @@
         max-width: 100%;
         border-bottom: 1px solid v.$line-gray;
     }
+
+    &__controls {
+        flex-basis: 50%;
+        @include m.respond-to('laptop') {
+            flex-basis: 85%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__actions {
+        display: none;
+
+        @include m.respond-to('laptop') {
+            display: flex;
+            align-items: center;
+            flex-basis: 35%;
+            justify-content: space-between;
+        }
+        
+
+        .currency-select {
+            height: 100%;
+            flex-basis: 40%; 
+            padding-inline: 1em;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-inline: solid 1px v.$line-gray;
+
+            &__divider {
+                height: 100%;
+                border-right: solid 1px v.$line-gray;
+            }
+        }
+    }
 }
 
 .header-brand {
