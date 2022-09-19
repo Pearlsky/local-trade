@@ -1,0 +1,32 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+
+.has-submenu {
+    @include m.respond-to('tablet') {
+        position: relative;
+    }
+}
+
+.submenu {
+    padding-block: .5em;
+    padding-left: 1.5em;
+
+    &__link {
+        color: v.$letter-blue;
+        display: block;
+        padding-block: 1em;
+        width: auto;
+    }
+
+    @include m.respond-to('tablet') {
+        padding-inline: 1em;
+        margin-block-start: 2em;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 1px 1px 7px 1px v.$line-gray;
+        border-radius: 5px;
+    }
+}

@@ -1,6 +1,7 @@
 @use '../abstracts/mixins' as m;
 @use '../abstracts/variables' as v;
 @use '../base/typography' as t;
+@use '../base/animations' as a;
 
 .nav {
     &__menu {
@@ -71,6 +72,7 @@
 }
 
 .nav-outline {
+    display: none;
     margin: 0;
     background-color: white;
     position: fixed;
@@ -80,7 +82,9 @@
     width: 100%;
 
     @include m.respond-to('tablet') {
+        display: block;
         position: static;
+        transition: none;
     }
 }
 
@@ -93,15 +97,5 @@
     border-bottom: solid 1px v.$line-gray;
     @include m.respond-to('tablet') {
         display: none;
-    }
-}
-
-.submenu {
-    padding-left: 1.5em;
-
-    &__link {
-        color: v.$letter-blue;
-        display: inline-block;
-        padding-block: .5em;
     }
 }
