@@ -1,0 +1,41 @@
+@keyframes drop-in {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translate(0%);
+    }
+}
+
+
+@keyframes pre-load {
+    0% {
+    background: rgba(99, 99, 99, 0.1);
+    transform: scale(1);
+  }
+  
+  25% {
+    background: rgba(99, 99, 99, 0.15);
+    transform: scale(1.015);
+  }
+  
+  50% {
+    background: rgba(99, 99, 99, 0.1);
+    transform: scale(1);
+  }
+}
+
+@keyframes on-load {
+    0% {
+    transform: scale(1);
+  }
+  
+  25% {
+    transform: scale(1.15);
+  }
+  
+  50% {
+    transform: scale(1);
+  }
+}
