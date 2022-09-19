@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./assets/local-trade-logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="dist/css/main.css">
+    <script src="app/js/index.js" type="module"></script>
     <title>The best cryptocurrency exchange | Local Trade</title>
 </head>
 <body>
@@ -20,7 +21,7 @@
                 <div class="header-bar__controls">
                     <nav class="nav" aria-label="Main Navigation">
                         <button class="nav__menu--open" aria-expanded="false">menu</button>
-                        <section class="nav-outline">
+                        <section class="nav-outline visible" >
                             <header class="nav-header">
                                 <div class="page-logo">
                                     <img class="page-logo__icon" src="./assets/local-trade-logo.svg" alt="Localtrade Logo">
@@ -30,7 +31,7 @@
                             </header>
 
                             <ul class="nav__list">
-                                <li class="nav__item" role="presentation"><a href="#" class="nav__link">Learn Crypto</a>
+                                <li class="nav__item has-submenu" role="presentation"><a href="#" class="nav__link" aria-expanded="false">Learn Crypto</a>
                                     <ul class="submenu" hidden>
                                         <li role="presentation"><a href="#" class="submenu__link">Crypto Basics</a></li>
                                         <li role="presentation"><a href="#" class="submenu__link">How to Earn Crypto</a></li>
@@ -38,7 +39,7 @@
                                         <li role="presentation"><a href="#" class="submenu__link">How to Use Crypto</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav__item" role="presentation"><a href="#" class="nav__link">Finance</a>
+                                <li class="nav__item has-submenu" role="presentation" ><a href="#" class="nav__link" aria-expanded="false">Finance</a>
                                     <ul class="submenu" hidden>
                                         <li role="presentation"><a href="#" class="submenu__link">New Cryptocurrencies</a></li>
                                         <li role="presentation"><a href="#" class="submenu__link">Categories</a></li>
@@ -90,7 +91,40 @@
     <main role="main">
         <div class="main-outliner">
             <div class="main-layout">
-                <table class="crypto-table" aria-label="Cryptocurrencies Table Data">
+                <table class="pre-load">
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                    <!-- <table class="crypto-table" aria-label="Cryptocurrencies Table Data"></table> -->
                     <!-- <thead class="crypto-table-head">
                         <tr>
                             <th>Name</th>
