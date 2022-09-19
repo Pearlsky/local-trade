@@ -5,7 +5,7 @@
 .footer-layout {
     margin-inline: auto;
     padding-block: 4em 6em;
-    padding-inline: 1.5em;
+    padding-inline: 2.5em;
 
     @include m.respond-to('laptop') {
         display: flex;
@@ -40,7 +40,6 @@
 
 .footer-row {
     display: flex;
-    align-items: center;
     gap: 2em;
     flex-basis: 50%;
 
