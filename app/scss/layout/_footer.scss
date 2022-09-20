@@ -2,8 +2,13 @@
 @use '../abstracts/mixins' as m;
 
 
+footer {
+    background: v.$fade-green;
+}
+
 .footer-layout {
     margin-inline: auto;
+    border-inline: 1px solid v.$line-gray;
     padding-block: 4em 6em;
     padding-inline: 2.5em;
 

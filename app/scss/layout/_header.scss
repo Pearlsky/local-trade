@@ -2,6 +2,10 @@
 @use '../abstracts/mixins' as m;
 
 
+header {
+    background: v.$fade-green;
+}
+
 .header-bar {
     position: relative;
     display: flex;
