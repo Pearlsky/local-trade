@@ -112,6 +112,7 @@ table[class="pre-load"] {
 .crypto {
     &__icon {
         background-color: #fff;
+        border: none;
         height: 30px;
         width: 30px;
     }
@@ -153,7 +154,7 @@ table[class="pre-load"] {
 
         &--bear {
             @extend .crypto__change;
-            background-color: v.$fade-green; 
+            background-color: v.$fade-red; 
  
         }
 
