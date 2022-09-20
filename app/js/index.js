@@ -54,7 +54,7 @@ function populateCryptoTable() {
         3: "Change 24H",
         4: "Dynamic",
     }
-    const cryptoData = fetch(`https://min-api.cryptocompare.com/data/top/totalvolfull?limit=25&tsym=USD&apikey=${key}`)
+    const cryptoData = fetch(`https://min-api.cryptocompare.com/data/top/totalvolfull?limit=23&tsym=USD&apikey=${key}`)
         .then((response) => {
             if(!response.ok) {
                 throw new Error(`HTTP Error: ${response.status}`);
