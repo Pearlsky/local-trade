@@ -2,7 +2,7 @@ import {key, populateTableHead, populateTableBody} from "./populate-td.js";
 
 function init() {
     navToggle();
-    populateCryptoTable();
+    // populateCryptoTable();
 }
 
 function navToggle() {
