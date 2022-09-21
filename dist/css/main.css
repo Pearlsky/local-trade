@@ -463,6 +463,24 @@ table[class=pre-load] td:nth-child(3) {
   background-image: url(../../../assets/bull-change.svg);
 }
 
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal__body {
+  flex-basis: 80%;
+  max-width: 950px;
+}
+
 header {
   background: rgb(241, 255, 247);
 }
