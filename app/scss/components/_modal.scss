@@ -4,6 +4,8 @@
 
 
 .modal {
+    display: none;
+    
     &-backdrop {
         position: fixed;
         top: 0;

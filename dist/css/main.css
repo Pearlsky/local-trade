@@ -468,6 +468,9 @@ table[class=pre-load] td:nth-child(3) {
   background-image: url(../../../assets/bull-change.svg);
 }
 
+.modal {
+  display: none;
+}
 .modal-backdrop {
   position: fixed;
   top: 0;
