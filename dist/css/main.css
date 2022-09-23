@@ -290,7 +290,7 @@ a {
   }
 }
 
-.button, .login-btn, .signup-btn, .brand-usp__cta {
+.button, .convert-btn, .login-btn, .signup-btn, .brand-usp__cta {
   font-family: "Sora", sans-serif;
   text-transform: uppercase;
   background-color: transparent;
@@ -300,7 +300,7 @@ a {
   cursor: pointer;
 }
 
-.button--primary, .login-btn, .brand-usp__cta {
+.button--primary, .convert-btn, .login-btn, .brand-usp__cta {
   background-color: rgb(99, 255, 161);
 }
 
@@ -314,7 +314,12 @@ a {
 
 .login-btn {
   padding-block: 1em;
-  padding-inline: 1.7rem;
+  padding-inline: 1.7em;
+}
+
+.convert-btn {
+  padding: 1.5em 1.7em;
+  max-width: 300px;
 }
 
 table[class=pre-load] {
@@ -477,8 +482,83 @@ table[class=pre-load] td:nth-child(3) {
   justify-content: center;
 }
 .modal__body {
-  flex-basis: 80%;
+  flex-basis: 90%;
   max-width: 950px;
+  border-radius: 7px;
+  background-color: white;
+}
+.modal__body header {
+  padding-inline: 2em;
+  padding-block: 1.5em;
+  border-radius: 7px 7px 0 0;
+}
+.modal__body main {
+  padding-inline: 2em;
+  padding-block: 3.5em;
+  border-radius: 0 0 7px 7px;
+}
+.modal__page-logo {
+  display: flex;
+  align-items: center;
+}
+.modal__icon {
+  width: 45px;
+  height: 45px;
+}
+.modal__title {
+  color: rgb(45, 47, 52);
+  width: 10em;
+  margin-left: 0.5em;
+}
+
+.convert-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+@media (min-width: 53em) {
+  .convert-form {
+    flex-direction: row;
+  }
+}
+@media (min-width: 53em) {
+  .convert-from, .convert-to {
+    flex-basis: 50%;
+  }
+}
+.convert__input {
+  display: flex;
+  align-items: center;
+  border: solid 1px rgb(207, 207, 207);
+  border-radius: 5px;
+  padding-right: 1em;
+}
+.convert__input input, .convert__input select {
+  border: none;
+  padding-block: 1.5em;
+  background-color: rgb(250, 250, 250);
+}
+.convert__input input {
+  flex-basis: 70%;
+}
+.convert__input select {
+  border-left: 1px solid rgb(207, 207, 207);
+  flex-basis: 30%;
+}
+.convert-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.convert__output {
+  margin-block: 1.5em;
+  color: rgb(99, 99, 99);
+  font-size: 1.8rem;
+}
+@media (min-width: 53em) {
+  .convert__output {
+    align-self: flex-start;
+  }
 }
 
 header {

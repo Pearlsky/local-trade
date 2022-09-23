@@ -30,6 +30,13 @@
     @extend .button;
     @extend .button--primary;
     padding-block: 1em;
-    padding-inline: 1.7rem;
+    padding-inline: 1.7em;
 
+}
+
+.convert-btn {
+    @extend .button;
+    @extend .button--primary;
+    padding: 1.5em 1.7em;
+    max-width: 300px;
 }

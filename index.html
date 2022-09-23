@@ -89,36 +89,39 @@
                         <article class="modal__body">
                             <header aria-labelledby="cryptoconverter modal">
                                 <div class="modal__page-logo">
-                                    <img class="page-logo__icon" src="./assets/local-trade-logo.svg" alt="Localtrade Logo">
-                                    <h2 id="Cryptoconverter Modal" class="">Cryptocurrency Converter</h2>
+                                    <img class="modal__icon" src="./assets/local-trade-logo.svg" alt="Localtrade Logo">
+                                    <h2 id="Cryptoconverter Modal" class="modal__title">Cryptocurrency Converter</h2>
                                 </div>
                             </header>
                             <main>
-                                <section>
-                                    <div>
+                                <section class="convert-form">
+                                    <div class="convert-from">
                                         <label for="">Amount</label>
-                                        <div>
+                                        <div class="convert__input">
                                             <input type="text">
                                             <select name="" id=""></select>
+                                            
                                         </div>
                                     </div>
                 
-                                    <div>
+                                    <div class="convert-to">
                                         <label for="">Converted to</label>
-                                        <div>
+                                        <div class="convert__input">
                                             <input type="text">
                                             <select name="" id=""></select>
                                         </div>
                                     </div>
                                 </section>
-                                <p>
-                                    <span>0</span>
-                                    <span>BTC</span>
-                                    =
-                                    <span>0</span>
-                                    <span>USD</span>
-                                </p>
-                                <button>Convert</button>
+                                <section class="convert-stats">
+                                    <p class="convert__output">
+                                        <span>0</span>
+                                        <span>BTC</span>
+                                        =
+                                        <span>0</span>
+                                        <span>USD</span>
+                                    </p>
+                                    <button class="convert-btn">Convert cryptocurrency</button>
+                                </section>
                             </main>
                         </article>
                     </div>
