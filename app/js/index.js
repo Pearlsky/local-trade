@@ -95,7 +95,7 @@ function populateCryptoTable() {
 }
 
 function getCryptoOptions() {
-    const cryptoData = fetch(`http://cors-anywhere.herokuapp.com/https://pro-api.coinmarketcap.com/v1/cryptocurrency/map?limit=50&sort=cmc_rank&CMC_PRO_API_KEY=${otherKey}`)
+    const cryptoData = fetch(`https://pro-api.coinmarketcap.com/v1/cryptocurrency/map?limit=50&sort=cmc_rank&CMC_PRO_API_KEY=${otherKey}`)
         .then((response) => {
             if (!response.ok) {
                 throw new Error(`HTTP error: ${response.status}`);
@@ -113,7 +113,7 @@ function getCryptoOptions() {
 }
 
 function getFiatOptions() {
-    const fiatData = fetch(`http://cors-anywhere.herokuapp.com/https://pro-api.coinmarketcap.com/v1/fiat/map?sort=name&CMC_PRO_API_KEY=${otherKey}`)
+    const fiatData = fetch(`https://pro-api.coinmarketcap.com/v1/fiat/map?sort=name&CMC_PRO_API_KEY=${otherKey}`)
         .then((response) => {
             if (!response.ok) {
                 throw new Error(`HTTP error: ${response.status}`);
