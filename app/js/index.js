@@ -1,8 +1,12 @@
 import {key, populateTableHead, populateTableBody} from "./populate-td.js";
+import {otherKey, populateSelectOptions, createFiatOption, createCryptoOption} from "./populate-sel.js";
 
 function init() {
     navToggle();
     populateCryptoTable();
+    getCryptoOptions();
+    getFiatOptions();
+    modalToggle();
 }
 
 function navToggle() {
@@ -46,6 +50,20 @@ function navToggle() {
     subMenuToggle();
 }
 
+function modalToggle() {
+    const modalOpenBtn = document.querySelector(".brand-usp__cta");
+    const modalCloseBtn = document.querySelector(".modal__close");
+    const modal = document.querySelector(".modal");
+
+    modalOpenBtn.addEventListener("click", (e) => {
+       modal.removeAttribute("hidden"); 
+    });
+
+    modalCloseBtn.addEventListener("click", (e) => {
+        modal.setAttribute("hidden", "");
+    });
+}
+
 function populateCryptoTable() {
     const cryptoTable = document.querySelector(".pre-load");
     const tHeadData = {
@@ -74,6 +92,42 @@ function populateCryptoTable() {
         .catch(err => {
             console.error(`${err.name} : ${err.message}`);
         })
+}
+
+function getCryptoOptions() {
+    const cryptoData = fetch(`http://cors-anywhere.herokuapp.com/https://pro-api.coinmarketcap.com/v1/cryptocurrency/map?limit=50&sort=cmc_rank&CMC_PRO_API_KEY=${otherKey}`)
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error(`HTTP error: ${response.status}`);
+            } else {
+                return response.json();
+            }
+        })
+        .then((data) => {
+            const cryptoOptions = data["data"].map(el => createCryptoOption(el));
+            populateSelectOptions(".convert-from__select", cryptoOptions);
+        })
+        .catch(err => {
+            console.error(`${err.name}: ${err.message}: ${err.cause}`);
+        });
+}
+
+function getFiatOptions() {
+    const fiatData = fetch(`http://cors-anywhere.herokuapp.com/https://pro-api.coinmarketcap.com/v1/fiat/map?sort=name&CMC_PRO_API_KEY=${otherKey}`)
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error(`HTTP error: ${response.status}`);
+            } else {
+                return response.json();
+            }
+        })
+        .then((data) => {
+            const fiatOptions = data["data"].map(el => createFiatOption(el));
+            populateSelectOptions(".convert-to__select", fiatOptions);
+        })
+        .catch(err => {
+            console.error(`${err.name}: ${err.message}: ${err.cause}`);
+        });
 }
 
 init();
