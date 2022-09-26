@@ -468,9 +468,6 @@ table[class=pre-load] td:nth-child(3) {
   background-image: url(../../../assets/bull-change.svg);
 }
 
-.modal {
-  display: none;
-}
 .modal-backdrop {
   position: fixed;
   top: 0;
@@ -553,6 +550,7 @@ table[class=pre-load] td:nth-child(3) {
   align-items: center;
   border: solid 1px rgb(207, 207, 207);
   border-radius: 5px;
+  margin-bottom: 4em;
 }
 .convert__input input, .convert__input select {
   border: none;
@@ -571,7 +569,6 @@ table[class=pre-load] td:nth-child(3) {
 .convert__input select {
   border-left: 1px solid rgb(207, 207, 207);
   border-radius: 0 7px 7px 0;
-  text-align: center;
   width: 100%;
 }
 .convert-stats {
