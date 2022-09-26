@@ -36,16 +36,19 @@
             padding-inline: v.$root-size + 1;
             padding-block: 3.5em;
             border-radius: 0 0 7px 7px;
-
-
         }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     &__page-logo {
         display: flex;
         align-items: center;
     }
-
 
     &__icon {
         width: 45px;
@@ -56,6 +59,12 @@
         color: v.$letter-blue;
         width: 10em;
         margin-left: v.$root-size - .5;
+    }
+
+    &__close {
+        border: solid 1px v.$primary-green;
+        border-radius: 5px;
+        @include m.create-btn-icon(url(../../../assets/cross.svg), 2em, 2em);
     }
 }
 
@@ -68,13 +77,14 @@
 
         @include m.respond-to('tablet') {
             flex-direction: row;
+            justify-content: space-evenly;
         }
     }
 
     &-from, 
     &-to {
         @include m.respond-to('tablet') {
-            flex-basis: 50%;
+            flex-basis: 45%;
         }
     }
 
@@ -83,22 +93,30 @@
         align-items: center;
         border: solid 1px v.$line-gray;
         border-radius: 5px;
-        padding-right: 1em;
 
         & input,
         & select {
             border: none;
             padding-block: 1.5em;
             background-color: v.$fade-white;
+            font-size: t.$bigtext;
         }
 
         & input {
             flex-basis: 70%;
+            padding-inline: v.$root-size;
+            border-radius: 7px 0 0 7px;
+        }
+
+        & label {
+            flex-basis: 30%;
         }
 
         & select {
             border-left: 1px solid v.$line-gray;
-            flex-basis: 30%;
+            border-radius: 0 7px 7px 0;
+            text-align: center;
+            width: 100%;
         }
     }
 
@@ -109,12 +127,8 @@
     }
 
     &__output{
-        margin-block: 1.5em;
+        margin-block: 2em;
         color: v.$letter-gray;
         font-size: t.$logohead;
-
-        @include m.respond-to('tablet') {
-            align-self: flex-start;
-        }
     }
 }
