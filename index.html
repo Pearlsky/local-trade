@@ -87,11 +87,12 @@
                 <section class="modal">
                     <div class="modal-backdrop">
                         <article class="modal__body">
-                            <header aria-labelledby="cryptoconverter modal">
+                            <header class="modal__header" aria-labelledby="cryptoconverter modal">
                                 <div class="modal__page-logo">
                                     <img class="modal__icon" src="./assets/local-trade-logo.svg" alt="Localtrade Logo">
                                     <h2 id="Cryptoconverter Modal" class="modal__title">Cryptocurrency Converter</h2>
                                 </div>
+                                <button class="modal__close"></button>
                             </header>
                             <main>
                                 <section class="convert-form">
@@ -99,8 +100,11 @@
                                         <label for="">Amount</label>
                                         <div class="convert__input">
                                             <input type="text">
-                                            <select name="" id=""></select>
-                                            
+                                            <label for="crypto-currencies">
+                                                <select class="convert-from__select" name="cryptoCurrencencies" id="crypto-currencies">
+                                                </select>
+                                            </label>
+                                            </select>
                                         </div>
                                     </div>
                 
@@ -108,7 +112,10 @@
                                         <label for="">Converted to</label>
                                         <div class="convert__input">
                                             <input type="text">
-                                            <select name="" id=""></select>
+                                            <label for="fiat-currencies">
+                                                <select class="convert-to__select" name="" id="fiat-currencies"></select>
+                                            </label>
+                                            
                                         </div>
                                     </div>
                                 </section>
