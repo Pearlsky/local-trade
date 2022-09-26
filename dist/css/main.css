@@ -500,6 +500,11 @@ table[class=pre-load] td:nth-child(3) {
   padding-block: 3.5em;
   border-radius: 0 0 7px 7px;
 }
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .modal__page-logo {
   display: flex;
   align-items: center;
@@ -513,6 +518,19 @@ table[class=pre-load] td:nth-child(3) {
   width: 10em;
   margin-left: 0.5em;
 }
+.modal__close {
+  border: solid 1px rgb(99, 255, 161);
+  border-radius: 5px;
+  background: no-repeat url(../../../assets/cross.svg);
+  background-position: 50%;
+  display: inline-block;
+  height: 2em;
+  width: 2em;
+  text-indent: 5em;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+}
 
 .convert-form {
   display: flex;
@@ -522,11 +540,12 @@ table[class=pre-load] td:nth-child(3) {
 @media (min-width: 53em) {
   .convert-form {
     flex-direction: row;
+    justify-content: space-evenly;
   }
 }
 @media (min-width: 53em) {
   .convert-from, .convert-to {
-    flex-basis: 50%;
+    flex-basis: 45%;
   }
 }
 .convert__input {
@@ -534,19 +553,26 @@ table[class=pre-load] td:nth-child(3) {
   align-items: center;
   border: solid 1px rgb(207, 207, 207);
   border-radius: 5px;
-  padding-right: 1em;
 }
 .convert__input input, .convert__input select {
   border: none;
   padding-block: 1.5em;
   background-color: rgb(250, 250, 250);
+  font-size: 1.1rem;
 }
 .convert__input input {
   flex-basis: 70%;
+  padding-inline: 1em;
+  border-radius: 7px 0 0 7px;
+}
+.convert__input label {
+  flex-basis: 30%;
 }
 .convert__input select {
   border-left: 1px solid rgb(207, 207, 207);
-  flex-basis: 30%;
+  border-radius: 0 7px 7px 0;
+  text-align: center;
+  width: 100%;
 }
 .convert-stats {
   display: flex;
@@ -554,14 +580,9 @@ table[class=pre-load] td:nth-child(3) {
   align-items: center;
 }
 .convert__output {
-  margin-block: 1.5em;
+  margin-block: 2em;
   color: rgb(99, 99, 99);
   font-size: 1.8rem;
-}
-@media (min-width: 53em) {
-  .convert__output {
-    align-self: flex-start;
-  }
 }
 
 header {
