@@ -4,8 +4,6 @@
 
 
 .modal {
-    display: none;
-    
     &-backdrop {
         position: fixed;
         top: 0;
@@ -93,6 +91,7 @@
         align-items: center;
         border: solid 1px v.$line-gray;
         border-radius: 5px;
+        margin-bottom: 4em;
 
         & input,
         & select {
@@ -115,7 +114,6 @@
         & select {
             border-left: 1px solid v.$line-gray;
             border-radius: 0 7px 7px 0;
-            text-align: center;
             width: 100%;
         }
     }
