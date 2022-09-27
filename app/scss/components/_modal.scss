@@ -4,6 +4,8 @@
 
 
 .modal {
+    z-index: 3;
+
     &-backdrop {
         position: fixed;
         top: 0;
@@ -12,10 +14,11 @@
         bottom: 0;
         height: 100%;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.7);
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: 2;
     }
 
     &__body {
@@ -23,6 +26,7 @@
         max-width: 950px;
         border-radius: 7px;
         background-color: white;
+        z-index: 1;
 
         & header {
             padding-inline: v.$root-size + 1;
@@ -91,7 +95,6 @@
         align-items: center;
         border: solid 1px v.$line-gray;
         border-radius: 5px;
-        margin-bottom: 4em;
 
         & input,
         & select {
