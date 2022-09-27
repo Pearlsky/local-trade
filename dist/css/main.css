@@ -320,6 +320,7 @@ a {
 .convert-btn {
   padding: 1.5em 1.7em;
   max-width: 300px;
+  margin-top: 5em;
 }
 
 table[class=pre-load] {
@@ -468,6 +469,9 @@ table[class=pre-load] td:nth-child(3) {
   background-image: url(../../../assets/bull-change.svg);
 }
 
+.modal {
+  z-index: 3;
+}
 .modal-backdrop {
   position: fixed;
   top: 0;
@@ -476,16 +480,18 @@ table[class=pre-load] td:nth-child(3) {
   bottom: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 }
 .modal__body {
   flex-basis: 90%;
   max-width: 950px;
   border-radius: 7px;
   background-color: white;
+  z-index: 1;
 }
 .modal__body header {
   padding-inline: 2em;
@@ -550,7 +556,6 @@ table[class=pre-load] td:nth-child(3) {
   align-items: center;
   border: solid 1px rgb(207, 207, 207);
   border-radius: 5px;
-  margin-bottom: 4em;
 }
 .convert__input input, .convert__input select {
   border: none;
