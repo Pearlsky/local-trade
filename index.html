@@ -27,11 +27,11 @@
                                     <img class="page-logo__icon" src="./assets/local-trade-logo.svg" alt="Localtrade Logo">
                                     <p class="page-logo__text">localtrade</p>
                                 </div>
-                                <button class="nav__menu--close"></button>
+                                <button class="nav__menu--close">close</button>
                             </header>
 
                             <ul class="nav__list">
-                                <li class="nav__item has-submenu" role="presentation"><a href="#" class="nav__link" aria-expanded="false">Learn Crypto <button class="submenu-icon">drop-down</button></a>
+                                <li class="nav__item has-submenu" role="presentation"><a href="#" class="nav__link" aria-expanded="false">Learn Crypto <button class="submenu-icon" tabindex="-1">drop-down</button></a>
                                     <ul class="submenu" hidden>
                                         <li role="presentation"><a href="#" class="submenu__link">Crypto Basics</a></li>
                                         <li role="presentation"><a href="#" class="submenu__link">How to Earn Crypto</a></li>
@@ -39,7 +39,7 @@
                                         <li role="presentation"><a href="#" class="submenu__link">How to Use Crypto</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav__item has-submenu" role="presentation" ><a href="#" class="nav__link" aria-expanded="false">Finance<button class="submenu-icon">drop-down</button></a>
+                                <li class="nav__item has-submenu" role="presentation" ><a href="#" class="nav__link" aria-expanded="false">Finance<button class="submenu-icon" tabindex="-1">drop-down</button></a>
                                     <ul class="submenu" hidden>
                                         <li role="presentation"><a href="#" class="submenu__link">New Cryptocurrencies</a></li>
                                         <li role="presentation"><a href="#" class="submenu__link">Categories</a></li>
@@ -84,15 +84,15 @@
                         <img class="brand-hero__img" src="./assets/trading-screen-mockup.svg" alt="Local trade trading screen">
                     </section>
                 </article>
-                <section class="modal" hidden>
-                    <div class="modal-backdrop">
+                <section class="modal" role="dialog" aria-labelledby="Cryptoconverter Modal" aria-modal="true" tabindex="-1" hidden>
+                    <div class="modal-backdrop" tabindex="-1">
                         <article class="modal__body">
                             <header class="modal__header" aria-labelledby="cryptoconverter modal">
                                 <div class="modal__page-logo">
                                     <img class="modal__icon" src="./assets/local-trade-logo.svg" alt="Localtrade Logo">
-                                    <h2 id="Cryptoconverter Modal" class="modal__title">Cryptocurrency Converter</h2>
+                                    <h2 id="cryptoconverter-modal" class="modal__title">Cryptocurrency Converter</h2>
                                 </div>
-                                <button class="modal__close"></button>
+                                <button class="modal__close">close</button>
                             </header>
                             <main>
                                 <section class="convert-form">
