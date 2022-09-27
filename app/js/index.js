@@ -51,17 +51,80 @@ function navToggle() {
 }
 
 function modalToggle() {
-    const modalOpenBtn = document.querySelector(".brand-usp__cta");
-    const modalCloseBtn = document.querySelector(".modal__close");
+    function getFocusableEls (el) {
+        return Array.from(el.querySelectorAll('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]'));
+    }
+
+    function setAndMaintainFocus(el, array) {
+        const firstFocusableEl = array[0];
+        const lastFocusableEl = array[array.length -1];
+        
+        // setting focus on open
+        firstFocusableEl.focus();
+
+        // maintaining focus while open
+        el.addEventListener("keydown", (e) => {
+
+            function maintainShiftTab() {
+                if(document.activeElement === firstFocusableEl) {
+                    e.preventDefault();
+                    lastFocusableEl.focus();
+                }
+            }
+
+            function maintainTab() {
+                if (document.activeElement ===lastFocusableEl) {
+                    e.preventDefault();
+                    firstFocusableEl.focus();
+                }
+            }
+
+            if(e.key === "Tab") {
+
+                if(array.length === 1) {
+                    e.preventDefault();
+                }
+
+                if(e.shiftKey) {
+                    maintainShiftTab();
+                } else {
+                    maintainTab();
+                }
+            }
+        });
+    }
+
+    function closeModal(closableEl, lastFocusedEl) {
+        closableEl.setAttribute("hidden", "");
+        lastFocusedEl.focus();
+    };
+
+    function setAndControlClose(el) {
+        el.addEventListener("click", (e) => {
+            if(e.target.classList.contains("modal__close")) {
+                closeModal(el, modalOpenBtn);
+            }
+        });
+
+        el.addEventListener("keydown", (e) => {
+            if(e.key === "Escape") {
+                closeModal(el, modalOpenBtn);
+            }
+        });
+    }
+
     const modal = document.querySelector(".modal");
+    const modalOpenBtn = document.querySelector(".brand-usp__cta");
 
     modalOpenBtn.addEventListener("click", (e) => {
        modal.removeAttribute("hidden"); 
+       modal.focus();
+
+       const focusableEles = getFocusableEls(modal);
+       setAndMaintainFocus(modal, focusableEles);
     });
 
-    modalCloseBtn.addEventListener("click", (e) => {
-        modal.setAttribute("hidden", "");
-    });
+    setAndControlClose(modal);
 }
 
 function populateCryptoTable() {
