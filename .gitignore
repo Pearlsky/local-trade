@@ -3,6 +3,3 @@ node_modules
 package-lock.json
 package.json
 gulpfile.js
-populate-sel.js
-app/js/populate-td.js
-app/js/populate-sel.js
