@@ -367,16 +367,31 @@ table[class=pre-load] td:nth-child(3) {
   color: rgb(99, 99, 99);
 }
 .crypto-table-head th:nth-child(1) {
-  width: 45%;
+  width: 70%;
 }
 .crypto-table-head th:nth-child(2) {
   width: 30%;
 }
 .crypto-table-head th:nth-child(3) {
-  width: 25%;
+  display: none;
 }
 .crypto-table-head th:nth-child(4) {
   display: none;
+}
+@media (min-width: 28em) {
+  .crypto-table-head th:nth-child(1) {
+    width: 45%;
+  }
+  .crypto-table-head th:nth-child(2) {
+    width: 30%;
+  }
+  .crypto-table-head th:nth-child(3) {
+    display: table-cell;
+    width: 25%;
+  }
+  .crypto-table-head th:nth-child(4) {
+    display: none;
+  }
 }
 @media (min-width: 53em) {
   .crypto-table-head th:nth-child(1) {
@@ -405,6 +420,14 @@ table[class=pre-load] td:nth-child(3) {
 }
 .crypto-table-body td:nth-child(2) {
   font-weight: 800;
+}
+.crypto-table-body td:nth-child(3) {
+  display: none;
+}
+@media (min-width: 28em) {
+  .crypto-table-body td:nth-child(3) {
+    display: table-cell;
+  }
 }
 .crypto-table-body td:nth-child(4) {
   display: none;

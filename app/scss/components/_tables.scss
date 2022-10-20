@@ -48,7 +48,7 @@ table[class="pre-load"] {
         color: v.$letter-gray;
 
         &:nth-child(1) {
-            width: 45%;
+            width: 70%;
         }
 
         &:nth-child(2) {
@@ -56,11 +56,30 @@ table[class="pre-load"] {
         }
 
         &:nth-child(3) {
-            width: 25%;
+            display: none;
         }
 
         &:nth-child(4) {
             display: none;
+        }
+
+        @include m.respond-to('mobile') {
+            &:nth-child(1) {
+                width: 45%;
+            }
+    
+            &:nth-child(2) {
+                width: 30%;
+            }
+    
+            &:nth-child(3) {
+                display: table-cell;
+                width: 25%;
+            }
+    
+            &:nth-child(4) {
+                display: none;
+            }
         }
 
         @include m.respond-to('tablet') {
@@ -98,6 +117,13 @@ table[class="pre-load"] {
 
         &:nth-child(2) {
             font-weight: t.$huge;
+        }
+
+        &:nth-child(3) {
+            display: none;
+            @include m.respond-to('mobile') {
+                display: table-cell;
+            }
         }
 
         &:nth-child(4) {
