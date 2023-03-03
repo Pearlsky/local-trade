@@ -598,6 +598,7 @@ table[class=pre-load] td:nth-child(3) {
   border-left: 1px solid rgb(207, 207, 207);
   border-radius: 0 7px 7px 0;
   width: 100%;
+  background-color: rgb(99, 255, 161);
 }
 .convert-stats {
   display: flex;
