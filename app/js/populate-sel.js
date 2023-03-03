@@ -14,7 +14,9 @@ export function createFiatOption(object) {
 
 export const createCryptoOption = (object) => {
     const option = document.createElement('option');
-    option.value = object["symbol"];
-    option.textContent = `${object["symbol"]}`;
+    const currencyIcon = document.createElement('span');
+    const currencyName = document.createElement('span');
+    option.value = object["CoinInfo"]["Name"];
+    option.textContent = `${object["CoinInfo"]["Name"]}`;
     return option;
 }
