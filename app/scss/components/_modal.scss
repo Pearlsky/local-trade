@@ -83,7 +83,7 @@
         }
     }
 
-    &-from, 
+    &-from,
     &-to {
         @include m.respond-to('tablet') {
             flex-basis: 45%;
@@ -93,6 +93,7 @@
     &__input {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         border: solid 1px v.$line-gray;
         border-radius: 5px;
 
@@ -125,12 +126,24 @@
     &-stats {
         display: flex;
         flex-direction: column;
-        align-items: center;
+
+        @include m.respond-to('tablet') {
+            padding-inline: 1.5em;
+        }
     }
 
-    &__output{
+    &__output {
         margin-block: 2em;
-        color: v.$letter-gray;
         font-size: t.$logohead;
+        align-self: center;
+
+        @include m.respond-to('tablet') {
+            align-self: flex-start;
+        }
+
+        & .output__to-figure {
+            color: green;
+        }
+
     }
 }
