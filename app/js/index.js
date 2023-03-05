@@ -223,8 +223,13 @@ function convertUI() {
   const convertFromInput = document.querySelector(".convert-from input");
   const convertToInput = document.querySelector(".convert-to input");
   const convertButton = document.querySelector(".convert-btn");
+
   const fromSelect = document.querySelector(".convert-from select");
   const toSelect = document.querySelector(".convert-to select");
+
+  const outputFromCurrency = document.querySelector(".output__from-currency");
+  const outputToCurrency = document.querySelector(".output__to-currency");
+  const outputToFigure = document.querySelector(".output__to-figure");
 
   fromSelect.addEventListener("change", amountCurrencySwitch);
   toSelect.addEventListener("change", convertedToCurrencySwitch);
@@ -237,8 +242,8 @@ function convertUI() {
     (async () => {
       const response = await fetch(
         `https://rest.coinapi.io/v1/exchangerate/${
-          currencyFrom !== undefined ? currencyFrom : "BTC"
-        }/${currencyTo !== undefined ? currencyTo : "BTC"}`,
+          currencyFrom || "BTC"
+        }/${ currencyTo || "BTC"}`,
         {
           method: "GET",
           headers: { "X-CoinAPI-Key": "CFA97BA1-59A9-40E4-8FFD-C3542E4CE9AB" },
@@ -246,14 +251,19 @@ function convertUI() {
       );
       const data = await response.json();
       const { rate } = data;
-      currencyRate = rate;
+      currencyRate = Number(rate.toFixed(5));
+      
+      // this doesn't feel like the right thing to do from an async fn
+      outputFromCurrency.textContent = currencyFrom || "BTC";
+      outputToCurrency.textContent = currencyTo || "BTC";
+      outputToFigure.textContent = currencyRate;
     })();
   }
 
   // calc converted result fn
   function convert(amount) {
     if (currencyRate !== undefined) {
-      return Number(amount) * Number(currencyRate.toFixed(4));
+      return Number(amount) * currencyRate;
     }
   }
 
