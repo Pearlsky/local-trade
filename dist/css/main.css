@@ -320,7 +320,7 @@ a {
 .convert-btn {
   padding: 1.5em 1.7em;
   max-width: 300px;
-  margin-top: 5em;
+  align-self: center;
 }
 
 table[class=pre-load] {
@@ -577,6 +577,7 @@ table[class=pre-load] td:nth-child(3) {
 .convert__input {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   border: solid 1px rgb(207, 207, 207);
   border-radius: 5px;
 }
@@ -603,12 +604,24 @@ table[class=pre-load] td:nth-child(3) {
 .convert-stats {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+@media (min-width: 53em) {
+  .convert-stats {
+    padding-inline: 1.5em;
+  }
 }
 .convert__output {
   margin-block: 2em;
-  color: rgb(99, 99, 99);
   font-size: 1.8rem;
+  align-self: center;
+}
+@media (min-width: 53em) {
+  .convert__output {
+    align-self: flex-start;
+  }
+}
+.convert__output .output__to-figure {
+  color: green;
 }
 
 header {
