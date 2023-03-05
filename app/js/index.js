@@ -211,30 +211,28 @@ function getFiatOptions() {
     });
 }
 
+// attempt to understand everything this code is doing better; refactor!
 function convertUI() {
-  getRate();
   let currencyRate;
   let currencyFrom;
   let currencyTo;
 
-  function convert(amount) {
-    if (currencyRate !== undefined) {
-      return Number(amount) * Number(currencyRate.toFixed(4));
-    }
-  }
+  // get rate for the default placeholder currencies once page loads
+  getRate();
 
-  function amountCurrencyHandler(e) {
-    currencyFrom = e.target.value;
-    console.log(currencyFrom);
-    getRate(currencyFrom, currencyTo);
-  }
+  const convertFromInput = document.querySelector(".convert-from input");
+  const convertToInput = document.querySelector(".convert-to input");
+  const convertButton = document.querySelector(".convert-btn");
+  const fromSelect = document.querySelector(".convert-from select");
+  const toSelect = document.querySelector(".convert-to select");
 
-  function convertedToCurrencyHandler(e) {
-    currencyTo = e.target.value;
-    console.log(currencyTo);
-    getRate(currencyFrom, currencyTo);
-  }
+  fromSelect.addEventListener("change", amountCurrencySwitch);
+  toSelect.addEventListener("change", convertedToCurrencySwitch);
+  convertButton.addEventListener("click", () => {
+    convertToInput.value = convert(convertFromInput.value);
+  });
 
+  // calculate rate fn
   function getRate(currencyFrom, currencyTo) {
     (async () => {
       const response = await fetch(
@@ -252,17 +250,22 @@ function convertUI() {
     })();
   }
 
-  const fromInput = document.querySelector(".convert-from input");
-  const toInput = document.querySelector(".convert-to input");
+  // calc converted result fn
+  function convert(amount) {
+    if (currencyRate !== undefined) {
+      return Number(amount) * Number(currencyRate.toFixed(4));
+    }
+  }
 
-  fromInput.addEventListener("change", (e) => {
-    console.log(e.target.value);
-    toInput.value = convert(e.target.value);
-  });
+  // switch amount currency, auto calculating rate
+  function amountCurrencySwitch(e) {
+    currencyFrom = e.target.value;
+    getRate(currencyFrom, currencyTo);
+  }
 
-  const fromSelect = document.querySelector(".convert-from select");
-  const toSelect = document.querySelector(".convert-to select");
-
-  fromSelect.addEventListener("change", amountCurrencyHandler);
-  toSelect.addEventListener("change", convertedToCurrencyHandler);
+  // switch convert-to currency, auto re-calculating rate
+  function convertedToCurrencySwitch(e) {
+    currencyTo = e.target.value;
+    getRate(currencyFrom, currencyTo);
+  }
 }
